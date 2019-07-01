@@ -33,49 +33,62 @@
     </header>
 
     <div class="container">
-        <h1>Axios Demo <small>by CodingTheSmartWay.com</small></h1>
-        <div class="jumbotron">
-            <h1>Welcome To Axios</h1>
-            <h4>This application uses Axios. Axios is a Promise-based HTTP client for Javascript.</h4>
-        </div>
-        <div class="card panel-primary">
-            <div class="card-heading">GET Request</div>
-            <div class="card-body">
-                <button class="btn btn-primary" onclick="performGetRequest1()">Get Todos</button>
-                <button class="btn btn-warning" onclick="clearOutput()">Clear</button>
-                <div class="panel-body" id="getResult1"></div>
+        <p>Weather</p>
+        <form method="GET">
+            <input id="input-text" placeholder="Antwerpen"></input>
+            <button id="button">Get Weather</button>
+            <div></div>
+        </form>
+        <div class="container">
+            <div class="card" style="width: 12rem;">
+
+                <div class="card-body">
+                    <h5 class="card-title">Monday</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card's content.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 12rem;">
+
+                <div class="card-body">
+                    <h5 class="card-title">Tuesday</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+
+                </div>
+            </div>
+            <div class="card" style="width: 12rem;">
+
+                <div class="card-body">
+                    <h5 class="card-title">Wednesday</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+
+                </div>
+            </div>
+            <div class="card" style="width: 12rem;">
+
+                <div class="card-body">
+                    <h5 class="card-title">Thursday</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+
+                </div>
+            </div>
+            <div class="card" style="width: 12rem;">
+
+                <div class="card-body">
+                    <h5 class="card-title">Friday</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+
+                </div>
             </div>
         </div>
-
-        <div class="card panel-primary">
-            <div class="card-heading">GET Request With Paramenters</div>
-            <div class="card-body">
-                <input type="text" class="form-control" id="todoId" placeholder="Todo ID ..."><br>
-                <button class="btn btn-primary" onclick="performGetRequest2()">Get Todos</button>
-                <button class="btn btn-warning" onclick="clearOutput()">Clear</button>
-                <div class="panel-body" id="getResult2"></div>
-            </div>
-        </div>
-
-        <div class="card panel-primary">
-            <div class="card-heading">POST Request</div>
-            <div class="card-body">
-                <form class="form-inline" id="todoInputForm" action="">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="todoTitle" placeholder="Todo Title...">
-                    </div>
-                <button type="submit" class="btn btn-primary">Send </button>
-            </form><br>
-            <button class="btn btn-warning" onclick="clearOutput()">Clear</button>
-
-            <div class="card-body" id="postResult"></div>
-        </div>
-        <!--
-        <div class="location bg-primary rounded bg-primary">
-            <h2 class="text-center">The weather in <span>...</span></h2>
-        </div>
-    -->
     </div>
+    </div>
+
 
     <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
