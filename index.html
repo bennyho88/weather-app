@@ -31,12 +31,51 @@
             </div>
         </nav>
     </header>
-    <section class="container">
+
+    <div class="container">
+        <h1>Axios Demo <small>by CodingTheSmartWay.com</small></h1>
+        <div class="jumbotron">
+            <h1>Welcome To Axios</h1>
+            <h4>This application uses Axios. Axios is a Promise-based HTTP client for Javascript.</h4>
+        </div>
+        <div class="card panel-primary">
+            <div class="card-heading">GET Request</div>
+            <div class="card-body">
+                <button class="btn btn-primary" onclick="performGetRequest1()">Get Todos</button>
+                <button class="btn btn-warning" onclick="clearOutput()">Clear</button>
+                <div class="panel-body" id="getResult1"></div>
+            </div>
+        </div>
+
+        <div class="card panel-primary">
+            <div class="card-heading">GET Request With Paramenters</div>
+            <div class="card-body">
+                <input type="text" class="form-control" id="todoId" placeholder="Todo ID ..."><br>
+                <button class="btn btn-primary" onclick="performGetRequest2()">Get Todos</button>
+                <button class="btn btn-warning" onclick="clearOutput()">Clear</button>
+                <div class="panel-body" id="getResult2"></div>
+            </div>
+        </div>
+
+        <div class="card panel-primary">
+            <div class="card-heading">POST Request</div>
+            <div class="card-body">
+                <form class="form-inline" id="todoInputForm" action="">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="todoTitle" placeholder="Todo Title...">
+                    </div>
+                <button type="submit" class="btn btn-primary">Send </button>
+            </form><br>
+            <button class="btn btn-warning" onclick="clearOutput()">Clear</button>
+
+            <div class="card-body" id="postResult"></div>
+        </div>
+        <!--
         <div class="location bg-primary rounded bg-primary">
             <h2 class="text-center">The weather in <span>...</span></h2>
         </div>
-
-    </section>
+    -->
+    </div>
 
     <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -47,6 +86,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="dom.js"></script>
 </body>
 
 </html>
