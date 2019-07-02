@@ -1,48 +1,70 @@
-/*
 const key = "3c581e97bdd6665208a6ff2c1592317e";
 
-// You can also use ID
-const button = document.getElementById("button");
-const input = document.getElementById("input-text");
-console.log(button, input);
+const button = document.getElementById("search");
+const input = document.getElementById("input");
 
-// Axios is a tool that fetches the API
-/*
-input.addEventListener("keypress", getValueOfInput);
-// Scope and closure: you cant have acces to a var outside of this
-function getValueOfInput(event) {
-  console.log(event.target);
-}
-*/
-
-//Await till you get response of API, then...
-//City value has to be in the function!
-
-const key = "3c581e97bdd6665208a6ff2c1592317e";
-// You can also use ID
-const button = document.getElementsByTagName("button");
-const input = document.getElementById("input-text");
-
-/*Axios is a tool that fetches the API */
+const week = [];
+const dayOne = [];
+const dayTwo = [];
+const dayThree = [];
+const dayFour = [];
+const dayFive = [];
 
 input.addEventListener("keypress", getValueOfInput);
 
-/*Scope and closure: you cant have acces to a var outside of this */
 function getValueOfInput(e) {
   console.log(e.target.value);
 }
 
+// Axios request
+
 function getWeather() {
-  button.addEventListener("click", async function() {
+  button.addEventListener("click", async function(e) {
+    e.preventDefault();
     let city = input.value;
-    let api = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&mode=json&&APPID=${key}`;
-    let response = await axios.get(api);
-    //displayWeather(response);
-    console.log(response.data);
+    let api = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&APPID=${key}&unit=metrics`;
+    let response = await axios.get(api).catch(err => {
+      console.log(err);
+    });
+    console.log(response);
+    /*
+    for (i = 0; i < response.data.list.length; i += 8) {
+      console.log(response.data.list[i]);
+      week.push(response.data.list[i].main);
+    }
+    console.log(week);
+    dayOne.push(week[0]);
+    console.log(dayOne);
+    */
   });
 }
-/*
-function displayWeather() {
-  getElementById("description").value;
-}
+
+getWeather();
+
+/* Exercise 3:
+
+Write a JavaScript program to replace every 
+character in a given string with the character following
+it in the alphabet
+
+
+
+// String.fromCharCode
+// charCodeAt
+
+const moveCharsForward = str =>
+  str
+    .split("")
+    .map(char => String.fromCharCode(char.charCodeAt(0 + 1)))
+    .join("");
+
+console.log(moveCharsForward("abcd"));
+
+
+// replace every character in string
+var sentence = "The quick brown fox jumps over the lazy dog.";
+
+console.log(sentence.replace());
+// with character following it in the alphabet
+
 */

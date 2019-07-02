@@ -16,84 +16,97 @@
       rel="stylesheet"
       href="https://bootswatch.com/4/cerulean/bootstrap.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
 
   <body>
     <div class="container">
       <div class="row">
         <div class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded">
-          <h1 class="w-location"></h1>
-          <h3 class="text-dark" id="w-desc"></h3>
-          <h3 id="w-string"></h3>
-          <img id="w-icon" />
-          <ul class="list-group mt-3" id="w-details">
-            <li class="list-group-item" id="w-humidity"></li>
-            <li class="list-group-item" id="w-dewpoint"></li>
-            <li class="list-group-item" id="w-feels-like"></li>
-            <li class="list-group-item" id="w-wind"></li>
-          </ul>
-          <hr />
-          <button
-            type="button"
-            class="btn btn-primary"
-            data-toggle="modal"
-            data-target="#locModal"
-          >
-            Change Location
-          </button>
+          <h1 class="Header">Weather Forecast</h1>
+          <div id="search">
+            <input
+              type="text"
+              id="input"
+              autofocus
+              placeholder="Find your city"
+            />
+            <button type="submit" id="search">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+          <div id="result">
+            <ul class="list-group mt-3" id="w-details">
+              <li class="list-group-item" id="w-current">current temp</li>
+              <li class="list-group-item" id="w-min">min temp:</li>
+              <li class="list-group-item" id="w-max">max temp:</li>
+              <li class="list-group-item" id="w-humdity">humidity:</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="locModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="locModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="locModalLabel">Choose location</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
+      <div class="row text-center">
+        <div class="col-lg-2 col-md-offset-1 bg-primary day">
+          <h2>Monday</h2>
+          <hr class="hr" />
+          <div id="result">
+            <ul class="list-group mt-3" id="w-details">
+              <li class="list-group-item" id="w-current">current temp</li>
+              <li class="list-group-item" id="w-min">min temp:</li>
+              <li class="list-group-item" id="w-max">max temp:</li>
+              <li class="list-group-item" id="w-humdity">humidity:</li>
+            </ul>
           </div>
-          <div class="modal-body">
-            <form action="">
-              <form id="w-form">
-                <div class="form-group">
-                  <label for="city">City</label>
-                  <input type="text" id="city" class="form-control" />
-                </div>
-              </form>
-              <form id="w-form">
-                <div class="form-group">
-                  <label for="state">State</label>
-                  <input type="text" id="state" class="form-control" />
-                </div>
-              </form>
-            </form>
+        </div>
+        <div class="col-lg-2 bg-primary day">
+          <h2>Tuesday</h2>
+          <hr />
+          <div id="result">
+            <ul class="list-group mt-3" id="w-details">
+              <li class="list-group-item" id="w-current">current temp</li>
+              <li class="list-group-item" id="w-min">min temp:</li>
+              <li class="list-group-item" id="w-max">max temp:</li>
+              <li class="list-group-item" id="w-humdity">humidity:</li>
+            </ul>
           </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-            <button id="w-change-btn" type="button" class="btn btn-primary">
-              Save changes
-            </button>
+        </div>
+        <div class="col-lg-2 bg-primary day">
+          <h2>Wednesday</h2>
+          <hr />
+          <div id="result">
+            <ul class="list-group mt-3" id="w-details">
+              <li class="list-group-item" id="w-current">current temp</li>
+              <li class="list-group-item" id="w-min">min temp:</li>
+              <li class="list-group-item" id="w-max">max temp:</li>
+              <li class="list-group-item" id="w-humdity">humidity:</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 bg-primary day">
+          <h2>Thursday</h2>
+          <hr />
+          <div id="result">
+            <ul class="list-group mt-3" id="w-details">
+              <li class="list-group-item" id="w-current">current temp:</li>
+              <li class="list-group-item" id="w-min">min temp:</li>
+              <li class="list-group-item" id="w-max">max temp:</li>
+              <li class="list-group-item" id="w-humdity">humdity:</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 bg-primary day">
+          <h2>Friday</h2>
+          <hr />
+          <div id="result">
+            <ul class="list-group mt-3" id="w-details">
+              <li class="list-group-item" id="w-current">current temp:</li>
+              <li class="list-group-item" id="w-min">min temp:</li>
+              <li class="list-group-item" id="w-max">max temp:</li>
+              <li class="list-group-item" id="w-humdity">humdity:</li>
+            </ul>
           </div>
         </div>
       </div>
