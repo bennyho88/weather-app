@@ -41,9 +41,8 @@ function getWeather() {
     console.log(response.data);
   });
 }
-
 /*
-function displayWeather(){
-getElementById("description").value
+function displayWeather() {
+  getElementById("description").value;
 }
 */
