@@ -1,134 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Weather app</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://bootswatch.com/4/cerulean/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
 
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded">
-          <h1 class="Header">Weather Forecast</h1>
-          <div id="search">
-            <input
-              type="text"
-              id="input"
-              autofocus
-              placeholder="Find your city"
-            />
-            <button type="submit" id="search">
-              <i class="fa fa-search"></i>
-            </button>
-          </div>
-          <div id="result">
-            <ul class="list-group mt-3" id="w-details">
-              <li class="list-group-item" id="w-current">current temp</li>
-              <li class="list-group-item" id="w-min">min temp:</li>
-              <li class="list-group-item" id="w-max">max temp:</li>
-              <li class="list-group-item" id="w-humdity">humidity:</li>
-            </ul>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Weather app</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded">
+        <h1 class="Header">Weather Forecast</h1>
+        <div id="search">
+          <input type="text" id="input" autofocus placeholder="Find your city" />
+          <button type="submit" id="searchBtn">
+            <i class="fa fa-search"></i>
+          </button>
         </div>
-      </div>
-      <div class="row text-center">
-        <div class="col-lg-2 col-md-offset-1 bg-primary day">
-          <h2>Monday</h2>
-          <hr class="hr" />
-          <div id="result">
-            <ul class="list-group mt-3" id="w-details">
-              <li class="list-group-item" id="w-current">current temp</li>
-              <li class="list-group-item" id="w-min">min temp:</li>
-              <li class="list-group-item" id="w-max">max temp:</li>
-              <li class="list-group-item" id="w-humdity">humidity:</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-2 bg-primary day">
-          <h2>Tuesday</h2>
-          <hr />
-          <div id="result">
-            <ul class="list-group mt-3" id="w-details">
-              <li class="list-group-item" id="w-current">current temp</li>
-              <li class="list-group-item" id="w-min">min temp:</li>
-              <li class="list-group-item" id="w-max">max temp:</li>
-              <li class="list-group-item" id="w-humdity">humidity:</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-2 bg-primary day">
-          <h2>Wednesday</h2>
-          <hr />
-          <div id="result">
-            <ul class="list-group mt-3" id="w-details">
-              <li class="list-group-item" id="w-current">current temp</li>
-              <li class="list-group-item" id="w-min">min temp:</li>
-              <li class="list-group-item" id="w-max">max temp:</li>
-              <li class="list-group-item" id="w-humdity">humidity:</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-2 bg-primary day">
-          <h2>Thursday</h2>
-          <hr />
-          <div id="result">
-            <ul class="list-group mt-3" id="w-details">
-              <li class="list-group-item" id="w-current">current temp:</li>
-              <li class="list-group-item" id="w-min">min temp:</li>
-              <li class="list-group-item" id="w-max">max temp:</li>
-              <li class="list-group-item" id="w-humdity">humdity:</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-2 bg-primary day">
-          <h2>Friday</h2>
-          <hr />
-          <div id="result">
-            <ul class="list-group mt-3" id="w-details">
-              <li class="list-group-item" id="w-current">current temp:</li>
-              <li class="list-group-item" id="w-min">min temp:</li>
-              <li class="list-group-item" id="w-max">max temp:</li>
-              <li class="list-group-item" id="w-humdity">humdity:</li>
-            </ul>
-          </div>
+        <div id="result">
+          <ul class="list-group mt-3" id="w-details">
+            <li class="list-group-item" id="w-current">current temp</li>
+            <li class="list-group-item" id="w-min">min temp:</li>
+            <li class="list-group-item" id="w-max">max temp:</li>
+            <li class="list-group-item" id="w-humdity">humidity:</li>
+          </ul>
         </div>
       </div>
     </div>
+    <div class="row text-center">
+      <div class="col-lg-2 col-md-offset-1 bg-primary day">
+        <h2>Monday</h2>
+        <hr class="hr" />
+        <div id="result">
+          <ul class="list-group mt-3" id="w-details">
+            <li class="list-group-item" id="w-current">current temp</li>
+            <li class="list-group-item" id="w-min">min temp:</li>
+            <li class="list-group-item" id="w-max">max temp:</li>
+            <li class="list-group-item" id="w-humdity">humidity:</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-2 bg-primary day">
+        <h2>Tuesday</h2>
+        <hr />
+        <div id="result">
+          <ul class="list-group mt-3" id="w-details">
+            <li class="list-group-item" id="w-current">current temp</li>
+            <li class="list-group-item" id="w-min">min temp:</li>
+            <li class="list-group-item" id="w-max">max temp:</li>
+            <li class="list-group-item" id="w-humdity">humidity:</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-2 bg-primary day">
+        <h2>Wednesday</h2>
+        <hr />
+        <div id="result">
+          <ul class="list-group mt-3" id="w-details">
+            <li class="list-group-item" id="w-current">current temp</li>
+            <li class="list-group-item" id="w-min">min temp:</li>
+            <li class="list-group-item" id="w-max">max temp:</li>
+            <li class="list-group-item" id="w-humdity">humidity:</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-2 bg-primary day">
+        <h2>Thursday</h2>
+        <hr />
+        <div id="result">
+          <ul class="list-group mt-3" id="w-details">
+            <li class="list-group-item" id="w-current">current temp:</li>
+            <li class="list-group-item" id="w-min">min temp:</li>
+            <li class="list-group-item" id="w-max">max temp:</li>
+            <li class="list-group-item" id="w-humdity">humdity:</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-2 bg-primary day">
+        <h2>Friday</h2>
+        <hr />
+        <div id="result">
+          <ul class="list-group mt-3" id="w-details">
+            <li class="list-group-item" id="w-current">current temp:</li>
+            <li class="list-group-item" id="w-min">min temp:</li>
+            <li class="list-group-item" id="w-max">max temp:</li>
+            <li class="list-group-item" id="w-humdity">humdity:</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script
-      src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
+  <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
 
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="dom.js"></script>
-  </body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="dom.js"></script>
+</body>
+
 </html>

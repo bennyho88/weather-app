@@ -1,6 +1,8 @@
+/*
+
 const key = "3c581e97bdd6665208a6ff2c1592317e";
 
-const button = document.getElementById("search");
+const button = document.getElementById("searchBtn");
 const input = document.getElementById("input");
 
 const week = [];
@@ -35,36 +37,31 @@ function getWeather() {
     console.log(week);
     dayOne.push(week[0]);
     console.log(dayOne);
-    */
+    
   });
 }
 
 getWeather();
-
-/* Exercise 3:
-
-Write a JavaScript program to replace every 
-character in a given string with the character following
-it in the alphabet
-
-
-
-// String.fromCharCode
-// charCodeAt
-
-const moveCharsForward = str =>
-  str
-    .split("")
-    .map(char => String.fromCharCode(char.charCodeAt(0 + 1)))
-    .join("");
-
-console.log(moveCharsForward("abcd"));
-
-
-// replace every character in string
-var sentence = "The quick brown fox jumps over the lazy dog.";
-
-console.log(sentence.replace());
-// with character following it in the alphabet
-
 */
+
+const apiKey = "3c581e97bdd6665208a6ff2c1592317e";
+
+const button = document.getElementById("searchBtn");
+console.log(button);
+const input = document.getElementById("input");
+console.log(input);
+
+// Axios request
+
+function getWeather() {
+  button.addEventListener("click", async function(e) {
+    e.preventDefault();
+    let city = input.value;
+    let api = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&mode=json&&APPID=${apiKey}`;
+    let response = await axios.get(api);
+
+    console.log(response.data);
+  });
+}
+
+getWeather();
