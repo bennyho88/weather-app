@@ -3,6 +3,7 @@ const apiKey = "3c581e97bdd6665208a6ff2c1592317e";
 const button = document.getElementById("searchBtn");
 const input = document.getElementById("input");
 const dayOutput = document.getElementsByTagName("h3");
+const weatherIcon = document.getElementById("w-icon");
 
 let descriptionOne = document.getElementById("w-description-1");
 let descriptionTwo = document.getElementById("w-description-2");
@@ -67,7 +68,7 @@ let days = [
 ];
 let day = newDate.getDay();
 
-console.log(day);
+// console.log(day);
 
 for (d = 0; d < dayOutput.length; d++, day++) {
   if (day >= 7) {
@@ -75,4 +76,5 @@ for (d = 0; d < dayOutput.length; d++, day++) {
   }
   dayOutput[d].innerHTML = days[day];
 }
+
 getWeather();
