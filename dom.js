@@ -29,7 +29,7 @@ function getWeather() {
   button.addEventListener("click", async function(e) {
     e.preventDefault();
     let city = input.value;
-    let api = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&APPID=${apiKey}&unit=metrics`;
+    let api = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&APPID=${apiKey}&unit=metrics`;
     let response = await axios.get(api);
 
     descriptionOne.innerHTML = response.data.list[0].weather[0].main;
