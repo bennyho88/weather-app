@@ -1,17 +1,49 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  background-color:#F1FAEE;
+}
+
+
+.container {
+  font-family: 'Montserrat', sans-serif;
+  
+  margin: 6rem;
 }
 
 .day {
   height: 350px;
-  margin: 15px;
+  margin: 1rem;;
   padding: 10px 20px;
 
 }
 
+h3 {
+  color: white;
+}
 
 
 hr {
   background-color: black;
+}
+
+.title-section {
+  margin-bottom: 2rem;
+}
+
+#w-icon {
+  background-color: #4D6689;
+  
+}
+
+.title-b {
+  color: white;
+}
+
+.weather-b {
+  background-color: #457B9D;
 }

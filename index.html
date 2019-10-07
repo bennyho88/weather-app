@@ -11,13 +11,14 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="body">
   <div class="container">
-    <div class="row">
-      <div class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded">
-        <h1 class="Header">Weather Forecast</h1>
+    <div class="row title-section">
+      <div class="col-md-6 mx-auto text-center weather-b mt-4 p-4 rounded">
+        <h1 class="Header title-b">Weather Forecast</h1>
         <div id="search">
           <input type="text" id="input" autofocus placeholder="Find your city" />
           <button type="submit" id="searchBtn">
@@ -27,63 +28,63 @@
       </div>
     </div>
     <div class="row text-center">
-      <div class="col-lg-2 col-md-offset-1 bg-primary day rounded">
-        <h3>Monday</h3>
+      <div class="col-lg-2 col-md-offset-1 weather-b day rounded">
+        <h3 class="title-b">Monday</h3>
         <hr class="hr" />
         <div id="result">
           <ul class="list-group mt-3" id="w-details">
-            <li class="list-group-item bg-dark" id="w-icon"><img alt="" id="icon1"></li>
-            <li class="list-group-item bg-secondary" id="w-description-1">description:</li>
-            <li class="list-group-item bg-secondary" id="w-temp-1">maintemp:</li>
-            <li class="list-group-item bg-secondary" id="w-wind-1">wind:</li>
+            <li class="list-group-item " id="w-icon"><img alt="" id="icon1"></li>
+            <li class="list-group-item bg-secondary" id="w-description-1">Description:</li>
+            <li class="list-group-item bg-secondary" id="w-temp-1">Temperature:</li>
+            <li class="list-group-item bg-secondary" id="w-wind-1">Wind:</li>
           </ul>
         </div>
       </div>
-      <div class="col-lg-2 bg-primary day rounded">
-        <h3>Tuesday</h3>
+      <div class="col-lg-2 weather-b  day rounded">
+        <h3 class='title-b'>Tuesday</h3>
         <hr />
         <div id="result">
           <ul class="list-group mt-3" id="w-details">
-            <li class="list-group-item bg-dark" id="w-icon"><img alt="" id="icon2"></li>
-            <li class="list-group-item bg-secondary" id="w-description-2">description:</li>
-            <li class="list-group-item bg-secondary" id="w-temp-2">maintemp:</li>
-            <li class="list-group-item bg-secondary" id="w-wind-2">wind:</li>
+            <li class="list-group-item" id="w-icon"><img alt="" id="icon2"></li>
+            <li class="list-group-item bg-secondary" id="w-description-2">Description:</li>
+            <li class="list-group-item bg-secondary" id="w-temp-2">Temperature:</li>
+            <li class="list-group-item bg-secondary" id="w-wind-2">Wind:</li>
           </ul>
         </div>
       </div>
-      <div class="col-lg-2 bg-primary day rounded">
-        <h3>Wednesday</h3>
+      <div class="col-lg-2 weather-b  day rounded">
+        <h3 class="title-b">Wednesday</h3>
         <hr />
         <div id="result">
           <ul class="list-group mt-3" id="w-details">
-            <li class="list-group-item bg-dark" id="w-icon"><img alt="" id="icon3"></li>
-            <li class="list-group-item bg-secondary" id="w-description-3">description:</li>
-            <li class="list-group-item bg-secondary" id="w-temp-3">maintemp:</li>
-            <li class="list-group-item bg-secondary" id="w-wind-3">wind:</li>
+            <li class="list-group-item" id="w-icon"><img alt="" id="icon3"></li>
+            <li class="list-group-item bg-secondary" id="w-description-3">Description:</li>
+            <li class="list-group-item bg-secondary" id="w-temp-3">Temperature:</li>
+            <li class="list-group-item bg-secondary" id="w-wind-3">Wind:</li>
           </ul>
         </div>
       </div>
-      <div class="col-lg-2 bg-primary day rounded">
-        <h3>Thursday</h3>
+      <div class="col-lg-2  weather-b day rounded">
+        <h3 class="title-b">Thursday</h3>
         <hr />
         <div id="result">
           <ul class="list-group mt-3" id="w-details">
-            <li class="list-group-item bg-dark" id="w-icon"><img alt="" id="icon4"></li>
-            <li class="list-group-item bg-secondary" id="w-description-4">description:</li>
-            <li class="list-group-item bg-secondary" id="w-temp-4">maintemp:</li>
-            <li class="list-group-item bg-secondary" id="w-wind-4">wind:</li>
+            <li class="list-group-item" id="w-icon"><img alt="" id="icon4"></li>
+            <li class="list-group-item bg-secondary" id="w-description-4">Description:</li>
+            <li class="list-group-item bg-secondary" id="w-temp-4">Temperature:</li>
+            <li class="list-group-item bg-secondary" id="w-wind-4">Wind:</li>
           </ul>
         </div>
       </div>
-      <div class="col-lg-2 bg-primary day rounded">
-        <h3>Friday</h3>
+      <div class="col-lg-2 weather-b day rounded">
+        <h3 class="title-b">Friday</h3>
         <hr />
         <div id="result">
           <ul class="list-group mt-3" id="w-details">
-            <li class="list-group-item bg-dark" id="w-icon"><img alt="" id="icon5"></li>
-            <li class="list-group-item bg-secondary" id="w-description-5">description:</li>
-            <li class="list-group-item bg-secondary" id="w-temp-5">maintemp:</li>
-            <li class="list-group-item bg-secondary" id="w-wind-5">wind:</li>
+            <li class="list-group-item" id="w-icon"><img alt="" id="icon5"></li>
+            <li class="list-group-item bg-secondary" id="w-description-5">Description:</li>
+            <li class="list-group-item bg-secondary" id="w-temp-5">Temperature:</li>
+            <li class="list-group-item bg-secondary" id="w-wind-5">Wind:</li>
           </ul>
         </div>
       </div>
